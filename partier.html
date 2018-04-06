@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Parternes fordelings- og værdipolitik</title>
+    <meta name="author" content="ato">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../library/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="partier.css" type="text/css">
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Parternes fordelings- og værdipolitik</h1>
+        <div class="col-xs-12">
+            <div class="instr_container"></div>
+            <div id="explanationwrapper"></div>
+        </div>
+        <div class="col-xs-12 col-md-4 interface_container">
+            <div class="h1 interface_header"></div>
+            
+            <div class="interface_txt">Økonomien må aldrig være et mål i sig selv, men skal udelukkende være et middel til at opnå et bæredygtigt samfund, hvor vi alle passer på vores planet, hinanden og os selv.</div>
+            
+            <div class="draggable_container">
+                
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8 koordinatsystem_container droppable">
+            <img class="img-responsive" src="img/koordinatsystem.svg" />
+            <div class="btn_ghost btn btn-sm btn-default" id="btn-x1">Info</div>
+            <div class="btn_ghost btn btn-sm btn-default" id="btn-x2">Info</div>
+            <div class="btn_ghost btn btn-sm btn-default" id="btn-y1">Info</div>
+            <div class="btn_ghost btn btn-sm btn-default" id="btn-y2">Info</div>
+        </div>
+        <div id="posX"></div>
+        <div id="posY"></div>
+    </div>
+
+    </div>
+    <div class="console">
+                <div class="koordinatsystem_size"></div>
+                <div class="partipos"></div>
+            </div>
+    <script src="../library/vendor_scripts.js"></script>
+    <script src="../library/custom_scripts.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        getAjaxData("GET", "json/partier.json", false, "json");
+
+        one_line_footer();
+    });
+    </script>
+    <script type="text/javascript" src="partier.js"></script>
+</body>
+
+</html>

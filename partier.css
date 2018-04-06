@@ -1,0 +1,58 @@
+.interface_container {
+    height: 100%;
+    width: 100%%;
+    background-color: white;
+    border: 2px solid #eee;
+    padding: 0px/*10px 40px 50px 30px*/
+    ;
+}
+
+.interface_header {}
+
+.interface_txtA .interface_header {}
+
+#draggable {
+    z-index: 100;
+}
+
+.droppable {
+    border: 1px solid #ddd;
+    padding: 0;
+}
+
+.drop-hover {}
+
+.console {
+    color: green;
+    bottom: 0;
+}
+
+.draggable {
+    height: 60px;
+    z-index: 90;
+    cursor: pointer;
+    margin: 0;
+    box-shadow: 2px 2px 3px #999;
+    border-radius: 35px;
+}
+
+.btn_ghost {
+    position: absolute;
+}
+
+#btn-x1 {
+    color: green;
+    left: 1%;
+    top: 49%
+}
+
+#btn-x2 {
+    color: green;
+    right: 1%;
+    top: 49%
+}
+
+.drag_v {
+    position: absolute;
+    
+}

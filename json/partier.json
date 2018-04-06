@@ -1,0 +1,117 @@
+{
+    "userInterface": {
+        "header": "kredsløbet som økosystem",
+        "instruktion": "Placer partierne på den fordelingspolitiske akse",
+        "titel": "Partiernes placering"
+    },
+    "partier": [{
+        "Partinavn": "Enhedslisten",
+        "Listenavn": "Ø",
+        "pic": "img/ø.svg",
+        "f_politik": "Enhedslisten er Folketingets mest socialistiske parti. Partiet ønsker en kraftig progressiv beskatning, de velstillede skal betale mere i skat. En høj omfordeling af goderne skal sikre en mindre ulighed i samfundet.",
+        "v_politik": "",
+        "x_placering": -4.6,
+        "alt_x_placering": [-5, -4],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    },{
+        "Partinavn": "Alternativet",
+        "Listenavn": "Å",
+        "pic": "img/å.svg",
+        "f_politik": "Alternativet har en grøn ideologi. Dette betyder at Alternativet ønsker en mere en grøn skattepolitik med en bedre social og økonomisk balance. Partiet er som udgangspunkt tilhænger af eksisterende velfærdsstat der sikrer den materielle velfærd. Men denne skal videreudvikles til i højere grad at styrke fællesskabet og individet skal i højere grad kunne realisere sig selv. Civilsamfundet skal styrkes.",
+        "v_politik": "",
+        "x_placering": -1,
+        "alt_x_placering": [-2, -1, 0],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    },{
+        "Partinavn": "Socialdemokratiet",
+        "Listenavn": "A",
+        "pic": "img/a.svg",
+        "f_politik": "Socialdemokraterne har rødder i socialismen i den 'bløde' Socialdemokratiske udgave. Partiet ønsker at videreudvikle og styrke den eksisterende velfærdsmodel, hvor en stor stat sikrer en relativ høj omfordeling af goderne og en begrænset ulighed.",
+        "v_politik": "",
+        "x_placering": 0,
+        "alt_x_placering": [-1, 0, 1],
+        "y_placering": [],
+        "alt_y_placering": []
+    }, {
+        "Partinavn": "Radikale Venstre",
+        "Listenavn": "B",
+        "pic": "img/b.svg",
+        "f_politik": "Radikale Venstre er et socialliberalt parti. Partiet accepterer en vis grad af ulighed, men denne må ikke blive for stor. Partiet støtter skattelettelser, men ønsker modsat øgede afgifter på forbrug, formue og ejendom. Partiet ønsker færre universelle ydelser til fordel for flere behovsregulerede ydelser.",
+        "v_politik": "",
+        "x_placering": 0.8,
+        "alt_x_placering": [0, 1, 2],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    }, {
+        "Partinavn": "Dansk Folkeparti",
+        "Listenavn": "O",
+        "pic": "img/o.svg",
+        "f_politik": "Dansk Folkeparti betegner sig selv som et ikke-ideologisk parti, men partiet betragtes af eksperter som social-konservativt. Partiet ønsker således at bevare velfærden, og har især fokus på lavindkomstgrupper og de ældre.",
+        "v_politik": "",
+        "x_placering": 1.5,
+        "alt_x_placering": [2, 1, 0],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    },   {
+        "Partinavn": "Socialistisk Folkeparti",
+        "Listenavn": "F",
+        "pic": "img/f.svg",
+        "f_politik": "Socialistisk Folkeparti er et socialistisk parti. Partiet ønsker en vis progressiv beskatning, således at uligheden bliver mindre. Partiet ønsker at trække Socialdemokratiet mod venstre.",
+        "v_politik": "",
+        "x_placering": -3.5,
+        "alt_x_placering": [-3, -4],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    }, {
+        "Partinavn": "Venstre",
+        "Listenavn": "V",
+        "pic": "img/v.svg",
+        "f_politik": "Venstre er et liberalt parti med påvirkning af socialliberalismen. De mener den private sektor skal vokse, mens der skal være nulvækst i den offentlige sektor. De mener at omfordelingen via den offentlige sektor skal være mindre end den er i dag. De mener skattetrykket skal være mindre, men har ikke fokus på nedsættelse af topskatten.",
+        "v_politik": "",
+        "x_placering": 2.3,
+        "alt_x_placering": [1, 2, 3],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    }, {
+        "Partinavn": "Konservativt Folkeparti",
+        "Listenavn": "C",
+        "pic": "img/c.svg",
+        "f_politik": "Konservativt Folkeparti er …. Den mener staten har et socialt ansvar for alle borgere, men de mener at omfordelingen via den offentlige sektor skal være mindre end den er i dag. De mener skattetrykket skal være mindre og de har fokus på nedsættelse af topskatten, arveafgifter og selskabsskatten.",
+        "v_politik": "",
+        "x_placering": 3,
+        "alt_x_placering": [2, 3, 4],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    }, {
+        "Partinavn": "Liberal Alliance",
+        "Listenavn": "I",
+        "pic": "img/i.svg",
+        "f_politik": "Liberal Alliance er Folketingets mest liberalistiske parti. De ønsker mindre stat, mindre omfordeling af goderne og lavere beskatning af både indkomster og virksomheders overskud. De går ikke ind for progressiv beskatning, de mener at alle skal betaler den samme skatteprocent.",
+        "v_politik": "",
+        "x_placering": 3.7,
+        "alt_x_placering": [4,5],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    }, {
+        "Partinavn": "De Nye Borgerlige",
+        "Listenavn": "D",
+        "pic": "img/d.svg",
+        "f_politik": "Nye Borgerlige placerer sig fordelingspolitisk med meget liberalistiske holdninger. De vil mindske velfærdsstaten og omfordelingen af goderne. De er i mod progressive beskatning og vil afskaffe selskabsskatten. De har et forslag om at alle skal betale 37% i skat",
+        "v_politik": "",
+        "x_placering": 4.6,
+        "alt_x_placering": [5],
+        "y_placering": [],
+        "alt_y_placering": []
+
+    }]
+}
