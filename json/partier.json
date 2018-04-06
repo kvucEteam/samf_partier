@@ -7,7 +7,7 @@
     "partier": [{
         "Partinavn": "Enhedslisten",
         "Listenavn": "Ø",
-        "pic": "img/ø.svg",
+        "pic": "img/oe.svg",
         "f_politik": "Enhedslisten er Folketingets mest socialistiske parti. Partiet ønsker en kraftig progressiv beskatning, de velstillede skal betale mere i skat. En høj omfordeling af goderne skal sikre en mindre ulighed i samfundet.",
         "v_politik": "",
         "x_placering": -4.6,
@@ -18,7 +18,7 @@
     },{
         "Partinavn": "Alternativet",
         "Listenavn": "Å",
-        "pic": "img/å.svg",
+        "pic": "img/aa.svg",
         "f_politik": "Alternativet har en grøn ideologi. Dette betyder at Alternativet ønsker en mere en grøn skattepolitik med en bedre social og økonomisk balance. Partiet er som udgangspunkt tilhænger af eksisterende velfærdsstat der sikrer den materielle velfærd. Men denne skal videreudvikles til i højere grad at styrke fællesskabet og individet skal i højere grad kunne realisere sig selv. Civilsamfundet skal styrkes.",
         "v_politik": "",
         "x_placering": -1,
