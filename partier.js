@@ -95,7 +95,7 @@ $(".droppable").droppable({
 
             });
 
-
+//HEJ
 
 
         } else {
