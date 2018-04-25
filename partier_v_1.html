@@ -16,7 +16,7 @@
 
 <body>
     <div class="container-fluid">
-        <h1>Partiernes placering på den fordelingspolitiske akse</h1>
+        <h1>Partiernes placering på den værdipolitiske akse</h1>
         <div class="col-xs-12">
             <div class="instr_container"></div>
             <div id="explanationwrapper"></div>
@@ -31,34 +31,32 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-7 koordinatsystem_container droppable">
-                
-                <img class="img-responsive" src="img/koordinatsystem.svg" />
+                <img class="img-responsive" src="img/koordinatsystem2.svg" />
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-x1">Venstreorienteret fordelingspolitik</div>
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-x2">Højreorienteret fordelingspolitik</div>
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-y1">Venstreorienteret værdipolitik</div>
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-y2">Højreorienteret værdipolitik</div>
             </div>
+            <div id="posX"></div>
+            <div id="posY"></div>
         </div>
-        <div id="posX"></div>
-        <div id="posY"></div>
-    </div>
     </div>
     <div class="console">
         <div class="koordinatsystem_size"></div>
         <div class="partipos"></div>
-</body>
-<script src="../library/vendor_scripts.js"></script>
-<script src="../library/custom_scripts.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    getAjaxData("GET", "json/partier.json", false, "json");
+    </div>
+    <script src="../library/vendor_scripts.js"></script>
+    <script src="../library/custom_scripts.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        getAjaxData("GET", "json/partier.json", false, "json");
 
-    one_line_footer();
+        one_line_footer();
 
-    opgavetype = "fordeling";
-});
-</script>
-<script type="text/javascript" src="partier.js"></script>
+        opgavetype = "værdi"
+    });
+    </script>
+    <script type="text/javascript" src="partier.js"></script>
 </body>
 
 </html>
