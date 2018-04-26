@@ -102,7 +102,7 @@
 }
 
 
-
+/*MOBIL STYLES */
 @media (max-width: 560px) {
     .interface_txt {
         margin-bottom: 15px;
@@ -129,6 +129,7 @@
         height: 40px;
     }
 }
+/*MOBIL STYLES SLUT*/
 
 .grabbing {
     z-index: 99;

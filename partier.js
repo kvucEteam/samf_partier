@@ -41,6 +41,9 @@ $(document).ready(function() {
 });
 
 function init() {
+
+    /*----------  Randomize dataset  ----------*/
+
     for (var i = 0; i < jsonData.partier.length; i++) {
         randomize_Array.push(i);
     }
@@ -49,6 +52,8 @@ function init() {
     runde = randomize_Array[rand_tal];
 
     randomize_Array.splice(rand_tal, 1); //, item1, ....., itemX)
+
+    /*----------  Randomize dataset  ----------*/
 
 
 
@@ -74,6 +79,8 @@ function init() {
         microhint($(".draggable"), "Træk partiets logo til den rigtige position på den vandrette akse.");
     } else if (opgavetype == "værdi") {
         microhint($(".draggable"), "Partierne er låst fast på den vandrette akse. Træk  partiets logo til den rigtige position på den lodrette akse.");
+    } else if (opgavetype == "fri") {
+        microhint($(".draggable"), "Placer partierne på begge akser, som du synes de passer.");
     }
 
     if ($(window).width() < 980) {
@@ -90,10 +97,14 @@ function init() {
 
 }
 
-$(window).resize(function() {
+/*$(window).resize(function() {
     koordinatsystem_size = $(".droppable").width();
     $(".koordinatsystem_size").html("Console: " + runde + "<br/>Koordinatsystem_size: " + koordinatsystem_size);
-});
+});*/
+
+/*=============================================
+=            DROPPABLE comment block            =
+=============================================*/
 
 $(".droppable").droppable({
     accept: ".draggable",
@@ -131,14 +142,20 @@ $(".droppable").droppable({
 
         //alert("runde: " + runde);
 
+        /*======================================================
+        =             Opgavetype = Fordeling (droppable funktioner)            =
+        ======================================================*/
+
+
         if (opgavetype == "fordeling") {
             if (jsonData.partier[runde].alt_x_placering.indexOf(x_grid) > -1) {
 
                 UserMsgBox("body", "<h3>Rigtigt</h3><p>Du har placeret partiet indenfor det rigtige område på aksen. <br/>Partiet bliver flyttet på plads for at sikre, at det er korrekt placeret i forhold til de andre partier.");
-                $("body").click(function() {
+                $(".MsgBox_bgr").click(function() {
 
                     ui.draggable.appendTo(".koordinatsystem_container");
                     $(".koordinatsystem_container").css("height", koordinatsystem_size + "px");
+
                     ui.draggable.css("left", (tweeneed_x_pos - ui.draggable.width() * spacer) + "px").css("top", tweeneed_y_pos + "px");
                     ui.draggable.removeClass("grabbing");
                     ui.draggable.draggable("disable");
@@ -156,6 +173,9 @@ $(".droppable").droppable({
                     if (runde < jsonData.partier.length) {
                         make_card();
                     } else {
+
+                        /*----------  Slutfeedback fordeling  ----------*/
+
                         $(".interface_header").html("Du er færdig med opgaven.");
                         $(".draggable_container").html("");
                         //ttr("src", );
@@ -163,7 +183,7 @@ $(".droppable").droppable({
 
                     }
 
-                    $("body").off("click");
+                    $(".MsgBox_bgr").off("click");
 
                 });
 
@@ -183,7 +203,7 @@ $(".droppable").droppable({
                 }
                 UserMsgBox("body", "<h3>Forkert placering</h3><p>" + placering + "</p>");
 
-                $("body").click(function() {
+                $(".MsgBox_bgr").click(function() {
                     ui.draggable.css("height", img_width).css("width", img_width);
                     $(".draggable_container").css("height", img_width).css("width", img_width);
                     ui.draggable.animate({
@@ -192,7 +212,7 @@ $(".droppable").droppable({
                     }, 300, function() {
                         // Animation complete.
                     });
-                    $("body").off("click");
+                    $(".MsgBox_bgr").off("click");
                 });
             }
 
@@ -220,7 +240,7 @@ $(".droppable").droppable({
 
 
 
-                $("body").click(function() {
+                $(".MsgBox_bgr").click(function() {
 
                     $(".koordinatsystem_container").css("height", koordinatsystem_size + "px");
                     //ui.draggable.css("left", (tweeneed_x_pos - ui.draggable.width() * spacer) + "px").css("top", tweeneed_y_pos + "px");
@@ -248,6 +268,9 @@ $(".droppable").droppable({
                         if (runde < jsonData.partier.length) {
                             make_card();
                         } else {
+
+                            /*----------  Slutfeedback  ----------*/
+
                             $(".interface_header").html("Du er færdig med opgaven.");
                             $(".draggable_container").html("");
                             //ttr("src", );
@@ -255,7 +278,7 @@ $(".droppable").droppable({
 
                         }
 
-                        $("body").off("click");
+                        $(".MsgBox_bgr").off("click");
 
                     });
                 });
@@ -265,16 +288,17 @@ $(".droppable").droppable({
                 } else {
                     placering = "Du har placeret partiet for langt nede (til højre på den værdipolitiske akse)."
                 }
-                $(active).animate({
 
-                    top: 47 + "%"
-
-                }, 500, function() {
-                    //$(active).removeClass("glow");
-                });
 
                 UserMsgBox("body", "<h3>Forkert</h3>" + placering);
-                $("body").click(function() {
+                $(".MsgBox_bgr").click(function() {
+                    $(active).animate({
+
+                        top: 47 + "%"
+
+                    }, 500, function() {
+                        //$(active).removeClass("glow");
+                    });
                     ui.draggable.css("height", img_width).css("width", img_width);
                     $(".draggable_container").css("height", img_width).css("width", img_width);
                     ui.draggable.animate({
@@ -283,7 +307,7 @@ $(".droppable").droppable({
                     }, 300, function() {
                         // Animation complete.
                     });
-                    $("body").off("click");
+                    $(".MsgBox_bgr").off("click");
                 });
             }
         }
@@ -304,7 +328,10 @@ $(".droppable").droppable({
             ui.draggable.draggable("destroy"); //("destroy");
             ui.draggable.removeClass("draggable").addClass("draggable_clone");
             setTimeout(function() {
-                $(".draggable_clone").draggable();
+                $(".draggable_clone").draggable({
+
+                    containment: "parent"
+                });
             }, 300);
 
             $(".koordinatsystem_container").css("height", koordinatsystem_size + "px");
@@ -318,17 +345,11 @@ $(".droppable").droppable({
             if (runde < jsonData.partier.length) {
                 make_card();
             } else {
+                /*----------  Slutfeedback  ----------*/
                 $(".interface_header").html("Du er færdig med opgaven.");
                 $(".draggable_container").html("");
                 //ttr("src", );
                 $(".interface_txt").html("Du kan nu trække rundt og finjustere partiernes placering.");
-                setTimeout(function() {
-                    $(".draggable_clone").draggable({
-                        revert: "invalid",
-                        containment: "parent"
-                    });
-                }, 300);
-
             }
         }
 
@@ -367,9 +388,7 @@ function make_card() {
 
         revert: function(is_valid_drop) {
             console.log("is_valid_drop = " + is_valid_drop);
-            // when you're done, you need to remove the "dragging" class
-            // and yes, I'm sure this can be refactored better, but I'm 
-            // out of time for today! :)
+
             if (!is_valid_drop) {
                 $(this).css("height", img_width).css("width", img_width);
                 $(".draggable_container").css("height", img_width).css("width", img_width);
