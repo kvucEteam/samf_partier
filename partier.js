@@ -17,35 +17,40 @@ var over = false;
 var xPos;
 var yPos;
 
+var img_width;
+
 
 $(document).ready(function() {
-    
+
+
     if (opgavetype == "fordeling") {
         $('.instr_container').html(instruction_noLines(jsonData.userInterface.instruktion_fordeling)); // Tilføjet af THAN d. 02/01-2018.
     } else if (opgavetype == "værdi") {
         $('.instr_container').html(instruction_noLines(jsonData.userInterface.instruktion_vaerdi)); // Tilføjet af THAN d. 02/01-2018.
     }
 
-
-
-    $(".koordinatsystem_size").html("Console: <br/>Koordinatsystem_size: " + koordinatsystem_size);
-
-    //
+    //$(".koordinatsystem_size").html("Console: <br/>Koordinatsystem_size: " + koordinatsystem_size);
 
     $(".edit_title").click(function() {
         edit_title();
     });
 
+    init();
+
+
+});
+
+function init() {
     for (var i = 0; i < jsonData.partier.length; i++) {
         randomize_Array.push(i);
     }
-    //make_stack();
 
     var rand_tal = Math.floor(Math.random() * randomize_Array.length);
     runde = randomize_Array[rand_tal];
 
-
     randomize_Array.splice(rand_tal, 1); //, item1, ....., itemX)
+
+
 
     $(".btn-borre").click(function() {
         if (opgavetype == "fordeling") {
@@ -59,7 +64,6 @@ $(document).ready(function() {
         info($(this));
     });
 
-
     if (opgavetype == "værdi") {
         populate_koordinatsystem();
     }
@@ -72,25 +76,30 @@ $(document).ready(function() {
         microhint($(".draggable"), "Partierne er låst fast på den vandrette akse. Træk  partiets logo til den rigtige position på den lodrette akse.");
     }
 
-});
+    if ($(window).width() < 980) {
+        $(".btn_ghost").html("Info");
+    }
+
+    if ($(window).width() < 1000) {
+        img_width = "40px";
+
+    } else {
+        img_width = "60px";
+    }
+    $(".draggable, .draggable_container").css("width", img_width).css("height", img_width);
+
+}
 
 $(window).resize(function() {
     koordinatsystem_size = $(".droppable").width();
     $(".koordinatsystem_size").html("Console: " + runde + "<br/>Koordinatsystem_size: " + koordinatsystem_size);
-    //$("#draggable").css("height", koordinatsystem_size / size_multiplier + "px").css("width", koordinatsystem_size / size_multiplier + "px");
-    //alert("resize");
 });
-
 
 $(".droppable").droppable({
     accept: ".draggable",
-
     hoverClass: "drop-hover",
-
     over: function(event, ui) {
-
         over = true;
-
     },
     out: function() {
         over = false;
@@ -119,9 +128,6 @@ $(".droppable").droppable({
         //ui.draggable.css('top', 100);
         //ui.draggable.css('left', $(this).position().left);
         console.log(x_grid + ", INDEXOF:" + jsonData.partier[runde].alt_x_placering.indexOf(x_grid))
-
-
-
 
         //alert("runde: " + runde);
 
@@ -178,7 +184,8 @@ $(".droppable").droppable({
                 UserMsgBox("body", "<h3>Forkert placering</h3><p>" + placering + "</p>");
 
                 $("body").click(function() {
-                    ui.draggable.css("height", "60px").css("width", "60px");
+                    ui.draggable.css("height", img_width).css("width", img_width);
+                    $(".draggable_container").css("height", img_width).css("width", img_width);
                     ui.draggable.animate({
                         left: "0",
                         top: "0"
@@ -193,13 +200,9 @@ $(".droppable").droppable({
             =            Section comment block            =
             =============================================*/
 
-
-
-
             /*==========================================
             =            Opgavetype = værdi            =
             ==========================================*/
-
 
         } else if (opgavetype == "værdi") {
             var active_num = parseInt(ui.draggable.attr("id")[5]);
@@ -262,9 +265,18 @@ $(".droppable").droppable({
                 } else {
                     placering = "Du har placeret partiet for langt nede (til højre på den værdipolitiske akse)."
                 }
+                $(active).animate({
+
+                    top: 47 + "%"
+
+                }, 500, function() {
+                    //$(active).removeClass("glow");
+                });
+
                 UserMsgBox("body", "<h3>Forkert</h3>" + placering);
                 $("body").click(function() {
-                    ui.draggable.css("height", "60px").css("width", "60px");
+                    ui.draggable.css("height", img_width).css("width", img_width);
+                    $(".draggable_container").css("height", img_width).css("width", img_width);
                     ui.draggable.animate({
                         left: "0",
                         top: "0"
@@ -312,7 +324,7 @@ $(".droppable").droppable({
                 $(".interface_txt").html("Du kan nu trække rundt og finjustere partiernes placering.");
                 setTimeout(function() {
                     $(".draggable_clone").draggable({
-                        revert:"invalid",
+                        revert: "invalid",
                         containment: "parent"
                     });
                 }, 300);
@@ -359,7 +371,8 @@ function make_card() {
             // and yes, I'm sure this can be refactored better, but I'm 
             // out of time for today! :)
             if (!is_valid_drop) {
-                $(this).css("height", "60px").css("width", "60px");
+                $(this).css("height", img_width).css("width", img_width);
+                $(".draggable_container").css("height", img_width).css("width", img_width);
 
                 return true;
             } else {
@@ -380,9 +393,10 @@ function make_card() {
 
             if (opgavetype == "værdi" && over == true) {
 
-                setTimeout(function() { 
+                setTimeout(function() {
 
-                    $(".glow").css("top", yPos); }, 100);
+                    $(".glow").css("top", yPos);
+                }, 100);
 
                 //tweeneed_y_pos = (koordinatsystem_size / 10) * (parseFloat(jsonData.partier[active_num].y_placering) + 5) - ui.draggable.width() / 2;
             }
@@ -430,17 +444,14 @@ function populate_koordinatsystem() {
     }
 }
 
-
-
 /*=====  End of funktioner til værdi politik   ======*/
-
 
 /*==================================================
 =            funktioner til fri version            =
 ==================================================*/
 function edit_title() {
     var gml_txt = $(".title_txt").html();
-    
+
     $(".title_txt").html("<input class='title_input' type='text'></input>");
     $(".title_input").val(gml_txt);
     $(".title_input").focus();
