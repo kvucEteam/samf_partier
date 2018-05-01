@@ -37,6 +37,8 @@ $(document).ready(function() {
 
     init();
 
+    $(".koordinatsystem_size").css("display", "none");
+
 
 });
 
