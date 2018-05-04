@@ -16,7 +16,7 @@
 
 <body>
     <div class="container-fluid">
-        <h1 class="edit_title"><span class="title_txt">Partiernes placering i koordinatsystemet</span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></h1>
+        <h1 class="edit_title"><span class="title_txt">Stil din opgave om værdi- og fordelingspolik</span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></h1>
         <div class="col-xs-12">
             <div class="instr_container"></div>
             <div id="explanationwrapper"></div>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-xs-12 col-sm-7 koordinatsystem_container droppable">
                 <div class="drop_overlay"></div>
-                <img class="img-responsive" src="img/koordinatsystem.svg" />
+                <img class="img-responsive" src="img/koordinatsystem2.svg" />
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-x1">Venstreorienteret fordelingspolitik</div>
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-x2">Højreorienteret fordelingspolitik</div>
                 <div class="btn_ghost btn btn-sm btn-default" id="btn-y1">Venstreorienteret værdipolitik</div>
@@ -56,6 +56,8 @@ $(document).ready(function() {
     one_line_footer();
 
     opgavetype = "fri";
+
+    removeDescribingTextInCards();  // Tilføjet af THAN d. 3/5-2018. Denne funktion fjerner alt partibeskeivende tekst (f_politik) i JSON data.
 });
 </script>
 <script type="text/javascript" src="partier.js"></script>

@@ -168,3 +168,15 @@ input {
 .img-responsive {
     width: 100%;
 }
+
+/*********************************************
+        Styles tilføjet af THAN
+*********************************************/
+
+#UserMsgBox .label {  /* Aligner forkert svar med tekst */
+     margin-left: 0px; 
+}
+
+.xs-fontSize{
+    font-size: 0.75em;
+}
