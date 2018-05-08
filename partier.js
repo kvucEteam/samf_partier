@@ -110,6 +110,7 @@ $(document).on('click touchend', ".removeHintByClick", function(event) {  // TLY
 function removeDescribingTextInCards() {  // Tilføjet af THAN d. 3/5-2018. Denne kaldes i HTML-filen for opgavetype == "fri". Denne funktion fjerner alt partibeskeivende tekst (f_politik) i JSON data.
     for (var n in jsonData.partier) {
         jsonData.partier[n].f_politik = '';
+        jsonData.partier[n].v_politik = '';
     }
 }
 
@@ -402,7 +403,12 @@ function make_card() {
     $(".draggable_container").append("<img src='" + jsonData.partier[runde].pic + "'id= 'drag_" + runde + "' class='draggable' />");
     //ttr("src", );
 
-    $(".interface_txt").html(jsonData.partier[runde].f_politik);
+    if (opgavetype == "fordeling") {
+        $(".interface_txt").html(jsonData.partier[runde].f_politik);
+    }
+    if (opgavetype == "værdi") {
+        $(".interface_txt").html(jsonData.partier[runde].v_politik);
+    }
 
     $('.draggable').draggable({
         containment: $(".container-fluid"),
