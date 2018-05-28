@@ -1,10 +1,9 @@
 {
     "userInterface": {
         "header": "kredsløbet som økosystem",
-        "instruktion_fordeling": "Placer partierne på den vandrette fordelingspolitiske akse <br/>Fordelingspolitik handler om fordelingen af de materielle goder i samfundet. Fordelingspolitiske emner er fx skat, den offentlige sektors størrelse, grad af lighed og ulighed, kontanthjælp og SU.<br/><span class='btn btn-borre btn-info btn-sm'>Læs mere </span>",
-        "instruktion_vaerdi": "Værdipolitik handler om hvilke værdier og principper der skal vægtes i samfundet. Værdipolitiske emner er fx retspolitik, udlændingepolitik og miljøpolitik samt national/international og traditionel/moderne.<br/><span class='btn btn-borre btn-info btn-sm'>Læs mere </span>",
-        
-        
+        "instruktion_fordeling": "Placér partierne på den vandrette fordelingspolitiske akse. Fordelingspolitik handler om fordelingen af de materielle goder i samfundet. Fordelingspolitiske emner er fx skat, den offentlige sektors størrelse, grad af lighed og ulighed, kontanthjælp og SU. <br/><span class='btn btn-borre btn-info btn-sm'>Læs mere </span>",
+        "instruktion_vaerdi": "Værdipolitik handler om hvilke værdier og principper der skal vægtes i samfundet. Værdipolitiske emner er fx retspolitik, udlændingepolitik og miljøpolitik samt national/international og traditionel/moderne. Placér partierne på den værdipolitiske akse ved at trække partiets logo over på den lodrette akse og flyt op eller ned.<br/><span class='btn btn-borre btn-info btn-sm'>Læs mere </span>",
+        "instruktion_fri": "Besvar opgaven ved at placere de relevante partier i figuren. Du kan tage et screendump, kopiere det ind i et worddokument og begrunde dine placeringer. (På PC brug: 'print screen'. På Mac brug: 'cmd + shift + 3').<br/><span class='btn btn-borre btn-info btn-sm'>Læs mere </span>",
         "titel": "Partiernes placering"
     },
     "partier": [{
@@ -120,7 +119,7 @@
         "Til venstre på den fordelingspolitiske akse er de socialistiske holdninger med lighed, stor omfordeling, høj skat, stor stat og regulering af markedet.",
         "Til højre på den fordelingspolitiske akse er de liberalistiske holdninger med ulighed, lille omfordeling, lav skat, lille stat og marked frem for stat.",
         "Til venstre (for oven) ligger holdninger som støtte til multikulturalisme, det internationale og det moderne, miljø før vækst, forebyggelse frem for straf og højere ulandsbistand. ", 
-        "Til højre (for neden) ligger holdninger som fokus på de nationale og traditioner, vækst før miljø, hårdere straffe og lavere ulandsbistand. "
+        "Til højre (for neden) ligger holdninger som fokus på det nationale og traditioner, vækst før miljø, hårdere straffe og lavere ulandsbistand. "
 
     ]
 }

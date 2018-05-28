@@ -144,8 +144,15 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+.drag_v {
+
+}
+
 .glow {
-    box-shadow: 0px 0px 23px deepskyblue;
+    /*box-shadow: 0px 0px 23px deepskyblue;*/
+    box-shadow: 2px 2px 10px darkslategray;
+    /*stroke:;
+    stroke-width: 2;*/
     border-radius: 40px;
 }
 
@@ -179,4 +186,26 @@ input {
 
 .xs-fontSize{
     font-size: 0.75em;
+}
+
+#extraBottomSpacer { /* Kun synlig i bootstrap "xs mode" (alternativ til med) - giver lidt afstand til bunden af .card containeren. */
+    height: 40px;
+}
+
+.draggable {
+    margin: 2px;
+}
+
+.microhintBtnMenu {
+    z-index: 101;
+}
+
+.imgOverlay {
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+}
+
+.microhint {
+    z-index: 99;
 }
