@@ -103,6 +103,7 @@
 
 
 /*MOBIL STYLES */
+
 @media (max-width: 560px) {
     .interface_txt {
         margin-bottom: 15px;
@@ -129,6 +130,8 @@
         height: 40px;
     }
 }
+
+
 /*MOBIL STYLES SLUT*/
 
 .grabbing {
@@ -144,9 +147,7 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.drag_v {
-
-}
+.drag_v {}
 
 .glow {
     /*box-shadow: 0px 0px 23px deepskyblue;*/
@@ -176,19 +177,22 @@ input {
     width: 100%;
 }
 
+
 /*********************************************
         Styles tilføjet af THAN
 *********************************************/
 
-#UserMsgBox .label {  /* Aligner forkert svar med tekst */
-     margin-left: 0px; 
+#UserMsgBox .label {
+    /* Aligner forkert svar med tekst */
+    margin-left: 0px;
 }
 
-.xs-fontSize{
+.xs-fontSize {
     font-size: 0.75em;
 }
 
-#extraBottomSpacer { /* Kun synlig i bootstrap "xs mode" (alternativ til med) - giver lidt afstand til bunden af .card containeren. */
+#extraBottomSpacer {
+    /* Kun synlig i bootstrap "xs mode" (alternativ til med) - giver lidt afstand til bunden af .card containeren. */
     height: 40px;
 }
 
@@ -208,4 +212,13 @@ input {
 
 .microhint {
     z-index: 99;
+}
+
+.img_drag {
+    width: 81%;
+    position: absolute;
+    z-index: -1;
+    top: 25px;
+    left: 28px;
+
 }

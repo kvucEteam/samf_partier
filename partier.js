@@ -91,15 +91,7 @@ function init() {
     make_card();
 
     // setTimeout(function(){  
-        if (opgavetype == "fordeling") {
-            microhint($(".interface_header"), '<img class="img-responsive" src="img/iconshandanimate.gif"> <br>Træk partiets logo til den rigtige position på den vandrette akse.');
-        } else if (opgavetype == "værdi") {
-            microhint($(".interface_header"), '<img class="img-responsive" src="img/iconshandanimate.gif"> <br> Partierne er låst fast på den vandrette akse. Træk  partiets logo til den rigtige position på den lodrette akse.');
-        } else if (opgavetype == "fri") {
-            microhint($(".draggable"), '<img class="img-responsive" src="img/iconshandanimate.gif"> <br> Placer partierne på begge akser, som du synes de passer.', true, '#000');
-            microhint($(".glyphicon-edit"), 'Her kan du ændre opgavebeskrivelsen, fx "Placer partierne ift. Skattepolitik og miljøpolitik."', true, '#000');
-            $('.microhint').addClass('removeHintByClick');
-        }
+
     // }, 2000);
 
     if ($(window).width() < 980) {
@@ -113,7 +105,20 @@ function init() {
     } else {
         img_width = "60px";
     }
+
+
     $(".draggable, .draggable_container").css("width", img_width).css("height", img_width);
+
+            
+    if (opgavetype == "fordeling") {
+            microhint($(".draggable"), '<img class="img-responsive img_drag" src="img/iconshandanimate.gif"> <br> <br> <br> <br> <br>Træk partiets logo til den rigtige position på den vandrette akse.');
+        } else if (opgavetype == "værdi") {
+            microhint($(".draggable"), '<img class="img-responsive img_drag" src="img/iconshandanimate.gif"> <br> <br> <br> <br> <br> Partierne er låst fast på den vandrette akse. Træk  partiets logo til den rigtige position på den lodrette akse.');
+        } else if (opgavetype == "fri") {
+            microhint($("#drag_6"), '<img class="img-responsive" src="img/iconshandanimate.gif"> <br> Placer partierne på begge akser, som du synes de passer.', true, '#000');
+            microhint($(".glyphicon-edit"), 'Her kan du ændre opgavebeskrivelsen, fx "Placer partierne ift. Skattepolitik og miljøpolitik."', true, '#000');
+            $('.microhint').addClass('removeHintByClick');
+        }
 
 }
 
